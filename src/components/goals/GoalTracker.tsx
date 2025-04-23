@@ -50,19 +50,19 @@ export const GoalTracker: React.FC = () => {
   };
 
   return (
-    <main className="max-w-[1440px] w-full min-h-[900px] box-border bg-[#02010E] mx-auto px-0 py-10 max-md:max-w-[991px] max-md:px-0 max-md:py-5 max-sm:max-w-screen-sm font-['Chakra_Petch',sans-serif]">
-      <header className="flex justify-between items-center mx-[124px] max-md:mx-5 max-sm:mx-2.5">
-        <h1 className="text-white text-[28px] font-normal text-left">
-          <span>Meus objetivos do ano</span>
-          <span className="text-[#6FFF57] font-bold">_</span>
-        </h1>
-        <AddGoalForm onAddGoal={handleAddGoal} />
-      </header>
+    <div className="min-h-screen bg-[#02010E] flex justify-center">
+      <main className="w-full max-w-[1192px] min-h-[900px] box-border bg-[#02010E] mx-auto px-5 py-10 max-md:py-5 font-['Chakra_Petch',sans-serif]">
+        <header className="flex justify-between items-center mb-10">
+          <h1 className="text-white text-[28px] font-normal text-left">
+            <span>Meus objetivos do ano</span>
+            <span className="text-[#6FFF57] font-bold">_</span>
+          </h1>
+          <AddGoalForm onAddGoal={handleAddGoal} />
+        </header>
 
-      <GoalList goals={goals} onSelectGoal={handleSelectGoal} />
-
-      <CountdownTimer title={selectedGoal.title} />
-    </main>
+        <GoalList goals={goals} onSelectGoal={handleSelectGoal} />
+        <CountdownTimer title={selectedGoal.title} />
+      </main>
+    </div>
   );
 };
-

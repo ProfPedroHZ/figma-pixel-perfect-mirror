@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { TimerUnit } from "./TimerUnit";
 import { Button } from "@/components/ui/button";
@@ -54,7 +53,6 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
 
       return () => clearInterval(interval);
     } else {
-      // Default countdown if no target date is set
       const interval = setInterval(() => {
         if (seconds > 0) {
           setSeconds(seconds - 1);
@@ -89,7 +87,6 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
       setTargetDate(target);
       setIsSettingDate(false);
 
-      // Calculate initial values
       const now = new Date();
       const difference = target.getTime() - now.getTime();
 
@@ -116,12 +113,12 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
   };
 
   return (
-    <section className="w-[1192px] h-auto min-h-[557px] flex flex-col items-center justify-center bg-[rgba(58,55,94,0.3)] mt-10 mx-auto my-0 rounded-[0_0_40px_40px] max-md:w-[90%] max-md:p-5 pb-10">
-      <h2 className="text-white text-[32px] font-normal text-center mb-5 max-md:text-[28px] max-sm:text-2xl mt-10">
+    <section className="w-full bg-[rgba(58,55,94,0.3)] mt-10 mx-auto rounded-[0_0_40px_40px] py-10 px-5">
+      <h2 className="text-white text-[32px] font-normal text-center mb-5 max-md:text-[28px] max-sm:text-2xl">
         {title}
       </h2>
 
-      <div className="flex items-center mb-5">
+      <div className="flex items-center justify-center mb-5">
         <p className="text-[#6FFF57] text-xl font-bold text-center mr-4 max-md:text-lg max-sm:text-base">
           TEMPO PARA COMPLETAR OBJETIVO
         </p>
@@ -176,7 +173,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
         )}
       </div>
 
-      <div className="flex justify-center items-end max-md:flex-col">
+      <div className="flex justify-center items-end gap-8 max-md:flex-col max-md:gap-4">
         <TimerUnit value={days} label="dias" />
         <TimerUnit value={hours} label="horas" />
         <TimerUnit value={minutes} label="min" />
