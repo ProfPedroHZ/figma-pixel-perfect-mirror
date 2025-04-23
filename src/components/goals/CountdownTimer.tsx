@@ -113,7 +113,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
   };
 
   return (
-    <section className="w-full bg-[rgba(58,55,94,0.3)] mt-10 mx-auto rounded-[0_0_40px_40px] py-10 px-5">
+    <section className="w-full bg-[rgba(58,55,94,0.3)] mt-10 mx-auto rounded-lg py-10 px-5">
       <h2 className="text-white text-[32px] font-normal text-center mb-5 max-md:text-[28px] max-sm:text-2xl">
         {title}
       </h2>
