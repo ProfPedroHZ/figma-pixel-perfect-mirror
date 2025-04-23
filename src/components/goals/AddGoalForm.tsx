@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +24,7 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
   };
 
   return (
-    <div className="mt-6 mb-4 flex flex-col items-center">
+    <div className="mt-6 mb-4 flex justify-end items-center pr-[124px] max-md:pr-5 max-sm:pr-2">
       {!isFormVisible ? (
         <Button
           onClick={() => setIsFormVisible(true)}
@@ -87,3 +88,4 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
     </div>
   );
 };
+
