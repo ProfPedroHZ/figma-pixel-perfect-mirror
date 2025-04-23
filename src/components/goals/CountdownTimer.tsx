@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { TimerUnit } from "./TimerUnit";
 import { Button } from "@/components/ui/button";
@@ -167,7 +168,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
             <Button
               onClick={() => setIsSettingDate(false)}
               variant="outline"
-              className="border-[#6FFF57] text-white hover:bg-[rgba(58,55,94,0.7)]"
+              className="border-[#6FFF57] bg-transparent text-white hover:bg-[#6FFF57]/20 hover:text-white"
             >
               Cancelar
             </Button>
