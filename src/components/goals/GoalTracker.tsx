@@ -52,7 +52,7 @@ export const GoalTracker: React.FC = () => {
   return (
     <main className="max-w-[1440px] w-full min-h-[900px] box-border bg-[#02010E] mx-auto px-0 py-10 max-md:max-w-[991px] max-md:px-0 max-md:py-5 max-sm:max-w-screen-sm font-['Chakra_Petch',sans-serif]">
       <header className="flex justify-between items-center ml-[124px] mr-[124px] max-md:text-2xl max-md:ml-5 max-md:mr-5 max-sm:text-xl">
-        <h1>
+        <h1 className="text-white text-[28px] font-normal text-left">
           <span>Meus objetivos do ano</span>
           <span className="text-[#6FFF57] font-bold">_</span>
         </h1>
