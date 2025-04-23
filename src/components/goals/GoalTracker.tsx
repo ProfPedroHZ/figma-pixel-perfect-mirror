@@ -56,9 +56,8 @@ export const GoalTracker: React.FC = () => {
           <span>Meus objetivos do ano</span>
           <span className="text-[#6FFF57] font-bold">_</span>
         </h1>
+        <AddGoalForm onAddGoal={handleAddGoal} />
       </header>
-
-      <AddGoalForm onAddGoal={handleAddGoal} />
 
       <GoalList goals={goals} onSelectGoal={handleSelectGoal} />
 

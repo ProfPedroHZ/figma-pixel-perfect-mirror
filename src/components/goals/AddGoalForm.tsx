@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +23,7 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
   };
 
   return (
-    <div className="mt-0 flex justify-end pr-[124px] max-md:pr-5 max-sm:pr-2.5">
+    <div>
       {!isFormVisible ? (
         <Button
           onClick={() => setIsFormVisible(true)}
@@ -35,7 +34,7 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md p-4 bg-[rgba(58,55,94,0.7)] rounded-lg"
+          className="absolute z-10 w-full max-w-md p-4 bg-[rgba(58,55,94,0.7)] rounded-lg"
         >
           <h3 className="text-white text-xl mb-4">Adicionar Novo Objetivo</h3>
 
@@ -88,4 +87,3 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
     </div>
   );
 };
-
