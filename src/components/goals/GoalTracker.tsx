@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { GoalList } from "./GoalList";
 import { CountdownTimer } from "./CountdownTimer";
 import { AddGoalForm } from "./AddGoalForm";
+import { Footer } from "./Footer";
 
 interface Goal {
   id: number;
@@ -62,6 +62,7 @@ export const GoalTracker: React.FC = () => {
 
         <GoalList goals={goals} onSelectGoal={handleSelectGoal} />
         <CountdownTimer title={selectedGoal.title} />
+        <Footer />
       </main>
     </div>
   );
