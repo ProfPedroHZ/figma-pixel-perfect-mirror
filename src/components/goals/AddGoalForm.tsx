@@ -24,7 +24,7 @@ export const AddGoalForm: React.FC<AddGoalFormProps> = ({ onAddGoal }) => {
   };
 
   return (
-    <div className="mt-6 mb-4 flex justify-end items-center pr-[124px] max-md:pr-5 max-sm:pr-2">
+    <div className="mt-0 flex justify-end pr-[124px] max-md:pr-5 max-sm:pr-2.5">
       {!isFormVisible ? (
         <Button
           onClick={() => setIsFormVisible(true)}
