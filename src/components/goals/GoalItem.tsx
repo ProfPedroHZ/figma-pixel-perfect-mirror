@@ -23,4 +23,3 @@ export const GoalItem: React.FC<GoalItemProps> = ({
     </button>
   );
 };
-
