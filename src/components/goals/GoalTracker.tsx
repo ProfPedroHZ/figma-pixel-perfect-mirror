@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { GoalList } from "./GoalList";
 import { CountdownTimer } from "./CountdownTimer";
@@ -52,8 +53,8 @@ export const GoalTracker: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#02010E] flex justify-center">
       <main className="w-full max-w-[1192px] min-h-[900px] box-border bg-[#02010E] mx-auto px-5 py-10 max-md:py-5 font-['Chakra_Petch',sans-serif]">
-        <header className="flex justify-between items-center mb-10">
-          <h1 className="text-white text-[28px] font-normal text-left">
+        <header className="flex justify-between items-center mb-10 max-md:flex-col max-md:gap-4">
+          <h1 className="text-white text-[28px] font-normal text-left max-md:text-center max-md:text-2xl">
             <span>Meus objetivos do ano</span>
             <span className="text-[#6FFF57] font-bold">_</span>
           </h1>

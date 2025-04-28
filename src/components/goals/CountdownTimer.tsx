@@ -118,8 +118,8 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
         {title}
       </h2>
 
-      <div className="flex items-center justify-center mb-5">
-        <p className="text-[#6FFF57] text-xl font-bold text-center mr-4 max-md:text-lg max-sm:text-base">
+      <div className="flex items-center justify-center mb-5 max-md:flex-col max-md:gap-2">
+        <p className="text-[#6FFF57] text-xl font-bold text-center mr-4 max-md:text-lg max-sm:text-base max-md:mr-0">
           TEMPO PARA COMPLETAR OBJETIVO
         </p>
 
@@ -131,7 +131,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
             Definir Data
           </Button>
         ) : (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 max-md:flex-wrap max-md:justify-center">
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -173,7 +173,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ title }) => {
         )}
       </div>
 
-      <div className="flex justify-center items-end gap-8 max-md:flex-col max-md:gap-4">
+      <div className="flex justify-center items-end gap-8 max-md:flex-wrap max-md:gap-6">
         <TimerUnit value={days} label="dias" />
         <TimerUnit value={hours} label="horas" />
         <TimerUnit value={minutes} label="min" />
