@@ -11,10 +11,17 @@ interface Goal {
 interface GoalListProps {
   goals: Goal[];
   onSelectGoal: (goal: Goal) => void;
+  onDeleteGoal: (goalId: number) => void;
 }
 
-export const GoalList: React.FC<GoalListProps> = ({ goals, onSelectGoal }) => {
-  const [activeGoalId, setActiveGoalId] = useState<number | null>(1);
+export const GoalList: React.FC<GoalListProps> = ({ 
+  goals, 
+  onSelectGoal, 
+  onDeleteGoal 
+}) => {
+  const [activeGoalId, setActiveGoalId] = useState<number | null>(
+    goals.length > 0 ? goals[0].id : null
+  );
 
   const handleGoalClick = (goal: Goal) => {
     setActiveGoalId(goal.id);
@@ -29,6 +36,7 @@ export const GoalList: React.FC<GoalListProps> = ({ goals, onSelectGoal }) => {
           text={goal.text}
           isActive={goal.id === activeGoalId}
           onClick={() => handleGoalClick(goal)}
+          onDelete={() => onDeleteGoal(goal.id)}
           className={
             index === 0 
               ? "rounded-tl-lg rounded-bl-lg" 
@@ -41,4 +49,3 @@ export const GoalList: React.FC<GoalListProps> = ({ goals, onSelectGoal }) => {
     </nav>
   );
 };
-
